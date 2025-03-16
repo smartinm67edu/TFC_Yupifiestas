@@ -1,0 +1,526 @@
+/* ========== RESET GENERAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ========== ENCABEZADO (HEADER) ========== */
+header {
+    width: 100%;
+    height: 60px;
+    background: black;
+}
+
+.container-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-title h4 {
+    color: white;
+    font-weight: 300;
+}
+
+.icon-menu {
+    color: white;
+    font-size: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.icon-menu:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* ========== PORTADA CON IMAGEN Y ANIMACIÓN ========== */
+.container-portada {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url('/mnt/data/image.png') no-repeat center center/cover;
+}
+
+.capa-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.container-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.container-details h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.container-details p {
+    font-size: 20px;
+    max-width: 700px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.container-details button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.container-details button:hover {
+    background: #e6b800;
+}
+
+/* ========== SECCIÓN DE CASTILLOS Y EVENTOS ========== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background: white;
+    color: black;
+}
+
+.image-container {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ========== SECCIÓN DE CASTILLOS MEJORADA ========== */
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(45deg, #4a0080, #6a0dad); /* Fondo morado degradado */
+    text-align: center;
+    color: white;
+}
+
+/* Título centrado */
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de imágenes */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Espacio entre imágenes */
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Diseño de cada imagen */
+.image-container {
+    width: 280px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto de hover */
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Imágenes dentro de los contenedores */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+/* ========== SECCIÓN DE PACKS ========== */
+.packs {
+    margin-top: 40px;
+    padding: 50px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.pack {
+    background-color: #8a2be2;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 250px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.pack img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ========== SECCIÓN DE PROMOCIÓN MEJORADA ========== */
+.promotionWrapper {
+    position: relative;
+    width: 100%;
+    padding: 80px 20px;
+    background: url('assets/img/castillos/patrulla.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Capa con efecto de opacidad para mejorar el contraste del texto */
+.promotionWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Efecto oscuro semitransparente */
+    z-index: 1;
+}
+
+/* Contenedor del contenido */
+.promotionInfo {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título con efecto de entrada */
+.promotionInfo h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Descripción */
+.promotionInfo p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Botón llamativo */
+.promotionInfo .btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ffcc00;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.promotionInfo .btn:hover {
+    background: #e6b800;
+    transform: scale(1.1);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .promotionWrapper {
+        padding: 60px 20px;
+    }
+
+    .promotionInfo h2 {
+        font-size: 28px;
+    }
+
+    .promotionInfo p {
+        font-size: 18px;
+    }
+
+    .promotionInfo .btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+/* ========== SECCIÓN DE PACKS MEJORADA ========== */
+.packs {
+    padding: 100px 20px; /* Más espacio alrededor */
+    text-align: center;
+    background: #f8f8f8; /* Fondo claro */
+}
+
+.packs h2 {
+    font-size: 36px;
+    color: #6a0dad;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de los packs con más espacio */
+.packs-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Más espacio entre los packs */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Diseño de cada pack */
+.pack {
+    background-color: #8a2be2;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: 350px; /* Packs más grandes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de hover */
+.pack:hover {
+    transform: scale(1.05);
+}
+
+/* Imágenes de los packs */
+.pack img {
+    width: 100%;
+    height: 220px; /* Imágenes más grandes */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Texto de los packs */
+.pack p {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .packs-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pack {
+        width: 90%;
+        height: auto;
+    }
+
+    .pack img {
+        height: 200px;
+    }
+}
+
+
+
+/* ========== PIE DE PÁGINA ANIMADO (GRANDE) ========== */
+.footer {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(45deg, #4a0080, #6a0dad, #8a2be2);
+    color: white;
+    padding: 80px 20px; /* Se aumentó el padding para hacer el footer más grande */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Contenedor del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1400px; /* Se amplió el ancho del contenido */
+    margin: auto;
+    padding-bottom: 40px; /* Más espacio en la parte inferior */
+}
+
+/* Columnas del footer más grandes */
+.footer-info, .footer-social, .footer-links {
+    width: 30%;
+    min-width: 280px;
+    text-align: left;
+    font-size: 18px; /* Texto más grande */
+}
+
+.footer-info h3, .footer-social h3, .footer-links h3 {
+    font-size: 24px; /* Títulos más grandes */
+    margin-bottom: 15px;
+}
+
+.footer-info p, .footer-links ul {
+    margin: 10px 0;
+}
+
+/* Enlaces del footer */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Redes Sociales con iconos más grandes */
+.footer-social .social-icon {
+    display: inline-block;
+    margin: 10px;
+    font-size: 30px; /* Iconos más grandes */
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer-social .social-icon:hover {
+    transform: scale(1.3);
+    color: #ffcc00;
+}
+
+/* ========== ANIMACIÓN DE OLAS EN EL FOOTER ========== */
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Olas más grandes */
+    background: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Wave-pattern.svg');
+    background-size: 2500px 150px;
+    animation: moveWaves 6s infinite linear;
+}
+
+@keyframes moveWaves {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: 2500px;
+    }
+}
+
+/* Derechos Reservados más grandes */
+.footer-bottom {
+    font-size: 16px;
+    opacity: 0.9;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+/* ========== RESPONSIVE DESIGN MEJORADO ========== */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .footer-info, .footer-social, .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-social .social-icon {
+        font-size: 28px;
+    }
+}
+
