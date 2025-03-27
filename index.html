@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yupifiestas - Alquiler de Castillos Hinchables</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-<!-- ======================== ENCABEZADO ======================== -->
-<header>
-    <div class="container-header">
-        
-        <div class="logo-title">
-            <img src="assets/img/logos/logoyupi2.jpg" alt="Logo">
-            <h4>Yupifiestas</h4>
+    <!-- ======================== ENCABEZADO ======================== -->
+    <header>
+        <div class="container-header">
+
+            <div class="logo-title">
+                <img src="assets/img/logos/logoyupi2.jpg" alt="Logo">
+                <h4>Yupifiestas</h4>
+            </div>
+
+            <label class="icon-menu" onclick="toggleMenu()">
+                ☰ Menú
+            </label>
+
+            <nav class="nav">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#castillos">Castillos</a></li>
+                    <li><a href="#packs">Packs</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <label class="icon-menu" onclick="toggleMenu()">
-            ☰ Menú
-        </label>
-
-        <nav class="nav">
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#castillos">Castillos</a></li>
-                <li><a href="#packs">Packs</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <!-- ======================== PORTADA ======================== -->
     <div class="container-portada">
@@ -45,100 +47,110 @@
     <!-- ======================== CASTILLOS HINCHABLES ======================== -->
     <section id="castillos" class="castillos-section">
         <h2>Castillos Hinchables</h2>
-        <p class="castillos-descripcion">¡Descubre nuestros castillos hinchables más divertidos para todo tipo de fiestas!</p>
+        <p class="castillos-descripcion">¡Descubre nuestros castillos hinchables más divertidos para todo tipo de
+            fiestas!</p>
         <div class="castillos-grid">
-            <div class="castillo-card"><img src="castillo1.jpg" alt="Castillo 1"></div>
-            <div class="castillo-card"><img src="castillo2.jpg" alt="Castillo 2"></div>
-            <div class="castillo-card"><img src="castillo3.jpg" alt="Castillo 3"></div>
-            <div class="castillo-card"><img src="castillo4.jpg" alt="Castillo 4"></div>
-            <div class="castillo-card"><img src="castillo5.jpg" alt="Castillo 5"></div>
-            <div class="castillo-card"><img src="castillo6.jpg" alt="Castillo 6"></div>
-            <div class="castillo-card"><img src="castillo5.jpg" alt="Castillo 5 duplicado"></div>
-            <div class="castillo-card"><img src="castillo6.jpg" alt="Castillo 6 duplicado"></div>
+            <div class="castillo-card"><a href="/mnt/html/"><img src="mnt/data/castillo_ejemplo.webp"
+                        alt="Castillo 1"></a></div>
+            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 3"></div>
+            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 4"></div>
+            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 2"></div>
+            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 5"></div>
+            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 6"></div>
+            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 5"></div>
+            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 6"></div>
         </div>
     </section>
 
     <!-- ======================== PACKS ======================== -->
-    <div id="packs" class="packs"> 
+    <div id="packs" class="packs">
         <h2>Nuestros Packs</h2>
         <div class="packs-container">
     
             <!-- 🎉 Cumpleaños -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/" type="video/mp4">
-                </video>
-                <p>🎉 Cumpleaños</p>
-            </div>
+            <a href="mnt/html/event_cumpleaños.html">
+                <div class="pack">
+                    <video autoplay muted loop playsinline class="pack-video">
+                        <source src="assets/img/castillos/cumpleaños.mp4" type="video/mp4">
+                    </video>
+                    <p>🎉 Cumpleaños</p>
+                </div>
+            </a>
     
             <!-- 🎭 Despedidas -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/" type="video/mp4">
-                </video>
-                <p>🎭 Despedidas</p>
-            </div>
+            <a href="mnt/html/event_despedidas.html">
+                <div class="pack">
+                    <video autoplay muted loop playsinline class="pack-video">
+                        <source src="assets/img/castillos/despedidas.mp4" type="video/mp4">
+                    </video>
+                    <p>🎭 Despedidas</p>
+                </div>
+            </a>
     
             <!-- 🎪 Fiestas -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/" type="video/mp4">
-                </video>
-                <p>🎪 Fiestas</p>
-            </div>
-    
-            <!-- 🎈 Eventos -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/castillo_animacion1.mp4 type="video/mp4">
-                </video>
-                <p>🎈 Eventos</p>
-            </div>
+            <a href="mnt/html/event_fiestas.html">
+                <div class="pack">
+                    <video autoplay muted loop playsinline class="pack-video">
+                        <source src="assets/img/castillos/fiestas.mp4" type="video/mp4">
+                    </video>
+                    <p>🎪 Fiestas</p>
+                </div>
+            </a>
     
             <!-- 🍼 Gender Reveal -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/gender_reveal.mp4" type="video/mp4">
-                </video>
-                <p>🍼 Gender Reveal</p>
-            </div>
+            <a href="mnt/html/event_gender_reveal.html">
+                <div class="pack">
+                    <video autoplay muted loop playsinline class="pack-video">
+                        <source src="assets/img/castillos/gender_reveal.mp4" type="video/mp4">
+                    </video>
+                    <p>🍼 Gender Reveal</p>
+                </div>
+            </a>
     
             <!-- 🤠 Toro Mecánico -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/toro_mecanico.mp4" type="video/mp4">
-                </video>
-                <p>🤠 Toro Mecánico</p>
-            </div>
+            <a href="mnt/html/event_toro_mecanico.html">
+                <div class="pack">
+                    <video autoplay muted loop playsinline class="pack-video">
+                        <source src="assets/img/castillos/toro_mecanico.mp4" type="video/mp4">
+                    </video>
+                    <p>🤠 Toro Mecánico</p>
+                </div>
+            </a>
     
             <!-- 🏎️ Carreras Cars -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/cars1.mp4" type="video/mp4">
-                </video>
-                <p>🏎️ Carreras Cars</p>
-            </div>
+            <a href="mnt/html/event_cars.html">
+                <div class="pack">
+                    <video autoplay muted loop playsinline class="pack-video">
+                        <source src="assets/img/castillos/cars1.mp4" type="video/mp4">
+                    </video>
+                    <p>🏎️ Carreras Cars</p>
+                </div>
+            </a>
     
             <!-- 💦 Eventos Acuáticos -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/castillo_agua1.mp4" type="video/mp4">
-                </video>
-                <p>💦 Eventos Acuáticos</p>
-            </div>
+            <a href="mnt/html/event_agua.html">
+                <div class="pack">
+                    <video autoplay muted loop playsinline class="pack-video">
+                        <source src="assets/img/castillos/castillo_agua1.mp4" type="video/mp4">
+                    </video>
+                    <p>💦 Eventos Acuáticos</p>
+                </div>
+            </a>
     
             <!-- 🏖️ Piscinas -->
-            <div class="pack">
-                <video autoplay muted loop playsinline class="pack-video">
-                    <source src="assets/img/castillos/castillo_agua2.mp4" type="video/mp4">
-                </video>
-                <p>🏖️ Piscinas y toboganes</p>
-            </div>
+            <a href="mnt/html/event_piscinas.html">
+                <div class="pack">
+                    <video autoplay muted loop playsinline class="pack-video">
+                        <source src="assets/img/castillos/castillo_agua2.mp4" type="video/mp4">
+                    </video>
+                    <p>🏖️ Piscinas y toboganes</p>
+                </div>
+            </a>
     
         </div>
     </div>
     
-    
+
 
     <!-- ======================== VIDEO PROMOCIONAL ======================== -->
     <section class="promotionWrapper">
@@ -209,4 +221,5 @@
         }
     </script>
 </body>
+
 </html>

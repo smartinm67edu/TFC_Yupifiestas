@@ -102,35 +102,6 @@ header {
   width: 100%;
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .icon-menu {
-    display: block;
-  }
-
-  .nav {
-    width: 100%;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #6a0dad;
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-
 
 /* ======================== PORTADA ======================== */
 .container-portada {
@@ -210,7 +181,7 @@ header {
 .castillos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  gap: 50px;
   max-width: 1200px;
   margin: auto;
 }
@@ -241,6 +212,10 @@ header {
   text-align: center;
   background: #f8f8f8;
 }
+.packs-container a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
 
 .packs h2 {
   font-size: 36px;
@@ -250,10 +225,9 @@ header {
 
 .packs-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 40px;
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -291,6 +265,7 @@ header {
 
 /* === Texto del pack === */
 .pack p {
+  text-align: center;
   color: #8a2be2;
   background-color:#d8c3eb;
   background-size: 15.625vw;
@@ -299,7 +274,10 @@ header {
   font-size: 30px;
   font-weight: bold;
   margin-top: 10px;
+  width: 300px;
+  height: 75px;
 }
+
 
 
 
@@ -383,6 +361,139 @@ header {
   }
 }
 
+/* responsive---------------------------------------------------------------------------------------- */
+@media (max-width: 30rem) {
+  .packs {
+    padding: 100px 20px;
+    text-align: center;
+    background: #f8f8f8;
+  }
+  
+  .packs h2 {
+    font-size: 36px;
+    color: #6a0dad;
+    margin-bottom: 40px;
+  }
+  
+  .packs-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: auto;
+  }
+  
+  /* === Pack con video de fondo === */
+  .pack {
+    position: relative;
+    overflow: hidden;
+    background-color: #8a2be2;
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    z-index: 1;
+  }
+  
+  .pack:hover {
+    transform: scale(1.05);
+  }
+  
+  /* === Video de fondo del pack === */
+  .pack video.pack-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  /* === Texto del pack === */
+  .pack p {
+    color: #8a2be2;
+    background-color:#d8c3eb;
+    background-size: 15.625vw;
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 300px;
+    height: 75px;
+  }
+  
+  
+  
+  /* ======================== VIDEO PROMOCIONAL ======================== */
+  .promotionWrapper {
+    position: relative;
+    width: 100%;
+    padding: 80px 20px;
+    background: black;
+    text-align: center;
+    color: #8a2be2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .promotionWrapper .capa-gradient {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .promotionWrapper .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .promotionInfo h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .promotionInfo p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .promotionInfo .btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ffcc00;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .promotionInfo .btn:hover {
+    background: #e6b800;
+    transform: scale(1.1);
+  }
+  
+  
+}
 
 /* ======================== FOOTER ======================== */
 .footer {
