@@ -250,6 +250,46 @@ header {
   color: #6a0dad;
   margin-bottom: 40px;
 }
+/* boton con estilo en packs */
+.packs button {
+  background-color: #d8c3eb;
+  border: none;
+  z-index: 1;
+
+  /* Tamaño y estilo igual al <p> */
+  width: 300px;
+  height: 75px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+}
+
+.packs button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #663dff;
+  transition: all 0.3s ease;
+}
+
+.packs button:hover {
+  color: #fff;
+}
+
+.packs button:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.bpacks button:active {
+  top: 2px;
+}
+
 
 .packs-container {
   display: flex;
