@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog - Yupifiestas</title>
-  <link rel="stylesheet" href="./assets/css/blog.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <script src="../js/blog.js"></script>
+
 </head>
+
 <body>
-  <header class="header">
-    <img src="assets/img/logo.png" alt="Yupifiestas Logo" class="logo">
-    <h1>El Blog de Yupifiestas</h1>
-    <p>Ideas, consejos y novedades para tus fiestas inolvidables 🎉</p>
+  <header>
+    <div class="container-header">
+
+      <div class="logo-title">
+        <img src="../img/logos/logoyupi2.jpg" alt="Logo">
+        <h4>Yupifiestas</h4>
+      </div>
+
+      <label class="icon-menu" onclick="toggleMenu()">
+        ☰ Menú
+      </label>
+
+      <nav class="nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#castillos">Castillos</a></li>
+          <li><a href="#packs">Packs</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="assets/html/blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="blog-container">
     <article class="blog-post">
       <img src="assets/img/blog/cumple-tematico.jpg" alt="Cumpleaños temático">
       <h2>🎈 Ideas para cumpleaños temáticos</h2>
-      <p>Descubre las mejores ideas para organizar un cumpleaños inolvidable con castillos hinchables temáticos, decoración personalizada y juegos divertidos.</p>
+      <p>Descubre las mejores ideas para organizar un cumpleaños inolvidable con castillos hinchables temáticos,
+        decoración personalizada y juegos divertidos.</p>
       <a href="#">Leer más →</a>
     </article>
 
     <article class="blog-post">
       <img src="assets/img/blog/seguridad-castillos.jpg" alt="Seguridad castillos hinchables">
       <h2>🛡️ Seguridad en castillos hinchables</h2>
-      <p>Todo lo que debes saber sobre el uso seguro de castillos hinchables para que los más pequeños disfruten sin preocupaciones.</p>
+      <p>Todo lo que debes saber sobre el uso seguro de castillos hinchables para que los más pequeños disfruten sin
+        preocupaciones.</p>
       <a href="#">Leer más →</a>
     </article>
 
     <article class="blog-post">
       <img src="assets/img/blog/fiesta-despedida.jpg" alt="Fiesta despedida de soltero">
       <h2>🥳 Cómo organizar una despedida original</h2>
-      <p>Tips y actividades divertidas para hacer de tu despedida de soltero/a un evento inolvidable... ¡con castillo incluido!</p>
+      <p>Tips y actividades divertidas para hacer de tu despedida de soltero/a un evento inolvidable... ¡con castillo
+        incluido!</p>
       <a href="#">Leer más →</a>
     </article>
   </main>
@@ -40,4 +65,5 @@
     <p>© 2025 Yupifiestas. Todos los derechos reservados.</p>
   </footer>
 </body>
+
 </html>
