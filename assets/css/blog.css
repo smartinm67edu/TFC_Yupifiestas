@@ -6,35 +6,44 @@
   font-family: 'Raleway', sans-serif;
 }
 
-
-/* ======================== NAVBAR ======================== */
+/* ========== HEADER BASE ========== */
 header {
   width: 100%;
   background: #6a0dad;
-  /* morado vibrante */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+}
+@media (min-width: 30.1rem),
+(min-height: 30.1rem) and (orientation: landscape) {
+  .header-window {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
+/* Contenedor del logo y botón de menú */
 .container-header {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
+/* Logo y título */
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
+  width: 100%;
 }
 
 .logo-title img {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+  width: 4.125rem;
+  height: 4.125rem;
+  border-radius: 0.625rem;
   object-fit: cover;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
 }
@@ -46,31 +55,39 @@ header {
   margin: 0;
 }
 
+/* Menú hamburguesa */
 .icon-menu {
   display: none;
   color: white;
-  font-size: 1.75rem; 
+  font-size: 1.75rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 0.25rem 0.5rem; /* también relativo */
+  padding: 0.25rem 0.5rem;
   border-radius: 0.375rem;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
+  margin-left: auto;
 }
-
 
 .icon-menu:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
 
+/* Navegación (por fuera del container-header) */
 .nav {
-  margin-left: auto;
+  max-width: 75rem;
+  margin: 1rem auto;
+  padding: 0.8rem 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  
 }
 
+/* Lista de enlaces */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 1.5625rem; /* 25px */
   align-items: center;
   padding: 0;
   margin: 0;
@@ -79,7 +96,7 @@ header {
 .nav-links li a {
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -89,8 +106,8 @@ header {
   content: "";
   position: absolute;
   width: 0%;
-  height: 2px;
-  bottom: -4px;
+  height: 0.125rem;
+  bottom: -0.25rem;
   left: 0;
   background-color: #ffcc00;
   transition: width 0.3s;
@@ -103,22 +120,25 @@ header {
 .nav-links li a:hover::after {
   width: 100%;
 }
-@media (max-width: 30.1px) {
+
+/* ========== RESPONSIVE: MÓVILES Y TABLETS PEQUEÑAS ========== */
+@media (max-width: 30.1rem), (max-height: 30.1rem) and (orientation: landscape) {
+
   .icon-menu {
     display: block;
-    font-size: 1.25rem; 
+    font-size: 1.25rem;
     margin-left: auto;
   }
 
   .nav-links {
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem;
     display: none;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     text-align: left;
-    background: #6a0dad;
-    padding: 15px 0;
+    background: #bf99e0;
+    padding: 0.9375rem 0;
   }
 
   .nav-links.active {
@@ -131,15 +151,30 @@ header {
   }
 
   .nav {
-    width: 100%;
-  }
-
-  .nav-links li {
-    padding: 0 20px;
+    width: 100%; 
+    padding: 0rem 0rem;
   }
 
   .nav-links li a {
-    font-size: 18px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 0.9375rem;
+    padding: 0.3125rem 1.25rem;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-links li a:hover {
+    background-color: #6a0dad;
+    color: #ffcc00;
+  }
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem;
+    width: 100%;
   }
 }
 
@@ -169,8 +204,10 @@ header {
   justify-content: center;
   gap: 40px;
   max-width: 1200px;
-  margin: auto;
+  margin: 2rem auto 0; /* ⬅️ más separación arriba */
+  padding: 0 1rem;
 }
+
 
 .blog-post {
   background-color: #fff;
