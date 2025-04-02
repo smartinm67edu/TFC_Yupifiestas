@@ -257,3 +257,260 @@ header {
 .blog-post a:hover {
   color: #663dff;
 }
+/* ======================== FOOTER ======================== */
+.footer {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(45deg, #4a0080, #6a0dad, #8a2be2);
+  color: white;
+  padding: 5rem 1.25rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  gap: 2rem;
+}
+
+.footer-info,
+.footer-social,
+.footer-links {
+  flex: 1 1 280px;
+  text-align: left;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+}
+
+.footer-info h3,
+.footer-social h3,
+.footer-links h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 0.5rem;
+}
+
+.footer-info p,
+.footer-links ul li,
+.footer-social a {
+  color: #eee;
+  line-height: 1.7;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links ul li a:hover {
+  color: #ffcc00;
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  margin: 0.5rem;
+  font-size: 1.75rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  padding-top: 2rem;
+  font-weight: 500;
+  color: #ddd;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Wave-pattern.svg');
+  background-size: 2500px 150px;
+  animation: moveWaves 6s infinite linear;
+}
+
+@keyframes moveWaves {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 2500px;
+  }
+}
+
+ /* ======================== VIDEO PROMOCIONAL ======================== */
+ .promotionWrapper {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  background: black;
+  text-align: center;
+  color: #8a2be2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.promotionWrapper .capa-gradient {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.promotionWrapper .container {
+  position: relative;
+  z-index: 2;
+}
+
+.promotionInfo h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.promotionInfo p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.promotionInfo .btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #ffcc00;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.promotionInfo .btn:hover {
+  background: #e6b800;
+  transform: scale(1.1);
+}
+
+
+/* ======================== SHARING BLOCK ======================== */
+.sharing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sharing-gap, 0.5rem);
+}
+
+.sharing-item {
+  transition: background 0.3s, color 0.3s;
+  color: var(--sharing-color, #fff);
+  background-color: var(--sharing-bg, #000);
+  padding: var(--sharing-padding, 0.875rem);
+  border-radius: var(--sharing-radius, 0.5rem);
+  box-shadow:
+    0 3px 5px -1px rgba(0, 0, 0, 0.1),
+    0 2px 5px -1px rgba(0, 0, 0, 0.05);
+}
+
+.sharing-item .i {
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transition: transform 0.3s;
+  stroke-width: 2;
+  width: var(--sharing-size, 1.4rem);
+  height: var(--sharing-size, 1.4rem);
+  display: block;
+}
+
+.sharing-item:hover {
+  background-color: #fff;
+  --sharing-color: var(--sharing-bg, #000);
+}
+
+.sharing-item:hover .i {
+  transform: rotate(360deg);
+}
+
+
+
+/* Colores específicos por red social */
+.sharing-instagram  { --sharing-bg: #e05bcc; }
+.sharing-facebook  { --sharing-bg: #1778F2; }
+.sharing-twitter   { --sharing-bg: #55ACEE; }
+.sharing-pinterest { --sharing-bg: #F0002A; }
+.sharing-whatsapp  { --sharing-bg: #4FCE5D; }
+
+/* ======================== RESPONSIVE ======================== */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-social,
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-social .social-icon {
+    font-size: 1.5rem;
+  }
+
+  .social-buttons {
+    justify-content: center;
+  }
+}
+
+/* ======================== DEMO STYLING (OPCIONAL) ======================== */
+body.demo-sharing {
+  background-color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
