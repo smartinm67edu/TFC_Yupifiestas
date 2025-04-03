@@ -1,4 +1,4 @@
-/* === BLOG SECTION ADAPTADA A YUPIFIESTAS === */
+/* ======================== RESET Y BASE ======================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,33 +6,36 @@
   font-family: 'Raleway', sans-serif;
 }
 
-/* ========== HEADER BASE ========== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ======================== HEADER ======================== */
 header {
   width: 100%;
   background: #6a0dad;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-
-}
-@media (min-width: 30.1rem),
-(min-height: 30.1rem) and (orientation: landscape) {
-  .header-window {
-    display: flex;
-    margin-left: auto;
-  }
 }
 
-/* Contenedor del logo y botón de menú */
 .container-header {
-  max-width: 75rem; /* 1200px */
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 0.625rem 1.25rem; /* 10px 20px */
+  padding: 0.625rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-/* Logo y título */
 .logo-title {
   display: flex;
   align-items: center;
@@ -55,7 +58,6 @@ header {
   margin: 0;
 }
 
-/* Menú hamburguesa */
 .icon-menu {
   display: none;
   color: white;
@@ -73,21 +75,18 @@ header {
   transform: scale(1.05);
 }
 
-/* Navegación (por fuera del container-header) */
 .nav {
   max-width: 75rem;
   margin: 1rem auto;
   padding: 0.8rem 1.25rem;
   display: flex;
   justify-content: flex-end;
-  
 }
 
-/* Lista de enlaces */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5625rem; /* 25px */
+  gap: 1.5625rem;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -121,9 +120,14 @@ header {
   width: 100%;
 }
 
-/* ========== RESPONSIVE: MÓVILES Y TABLETS PEQUEÑAS ========== */
-@media (max-width: 30.1rem), (max-height: 30.1rem) and (orientation: landscape) {
+@media (min-width: 30.1rem), (min-height: 30.1rem) and (orientation: landscape) {
+  .header-window {
+    display: flex;
+    margin-left: auto;
+  }
+}
 
+@media (max-width: 30.1rem), (max-height: 30.1rem) and (orientation: landscape) {
   .icon-menu {
     display: block;
     font-size: 1.25rem;
@@ -151,8 +155,8 @@ header {
   }
 
   .nav {
-    width: 100%; 
-    padding: 0rem 0rem;
+    width: 100%;
+    padding: 0;
   }
 
   .nav-links li a {
@@ -161,8 +165,6 @@ header {
     width: 100%;
     font-size: 0.9375rem;
     padding: 0.3125rem 1.25rem;
-    color: #fff;
-    text-decoration: none;
   }
 
   .nav-links li a:hover {
@@ -178,8 +180,7 @@ header {
   }
 }
 
-
-/* ------------------------------------------- */
+/* ======================== BLOG SECTION ======================== */
 .blog-section {
   padding: 100px 20px;
   text-align: center;
@@ -204,10 +205,9 @@ header {
   justify-content: center;
   gap: 40px;
   max-width: 1200px;
-  margin: 2rem auto 0; /* ⬅️ más separación arriba */
+  margin: 2rem auto 0;
   padding: 0 1rem;
 }
-
 
 .blog-post {
   background-color: #fff;
@@ -257,6 +257,68 @@ header {
 .blog-post a:hover {
   color: #663dff;
 }
+
+/* ======================== PROMOCIÓN VIDEO ======================== */
+.promotionWrapper {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  background: black;
+  text-align: center;
+  color: #8a2be2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.promotionWrapper .capa-gradient {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.promotionWrapper .container {
+  position: relative;
+  z-index: 2;
+}
+
+.promotionInfo h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.promotionInfo p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.promotionInfo .btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #ffcc00;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.promotionInfo .btn:hover {
+  background: #e6b800;
+  transform: scale(1.1);
+}
+
 /* ======================== FOOTER ======================== */
 .footer {
   position: relative;
@@ -363,77 +425,11 @@ header {
 }
 
 @keyframes moveWaves {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    background-position-x: 2500px;
-  }
+  from { background-position-x: 0; }
+  to { background-position-x: 2500px; }
 }
 
- /* ======================== VIDEO PROMOCIONAL ======================== */
- .promotionWrapper {
-  position: relative;
-  width: 100%;
-  padding: 80px 20px;
-  background: black;
-  text-align: center;
-  color: #8a2be2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.promotionWrapper .capa-gradient {
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.promotionWrapper .container {
-  position: relative;
-  z-index: 2;
-}
-
-.promotionInfo h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.promotionInfo p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.promotionInfo .btn {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 18px;
-  font-weight: bold;
-  background: #ffcc00;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.promotionInfo .btn:hover {
-  background: #e6b800;
-  transform: scale(1.1);
-}
-
-
-/* ======================== SHARING BLOCK ======================== */
+/* ======================== SHARING ======================== */
 .sharing {
   display: flex;
   flex-wrap: wrap;
@@ -447,9 +443,7 @@ header {
   background-color: var(--sharing-bg, #000);
   padding: var(--sharing-padding, 0.875rem);
   border-radius: var(--sharing-radius, 0.5rem);
-  box-shadow:
-    0 3px 5px -1px rgba(0, 0, 0, 0.1),
-    0 2px 5px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1), 0 2px 5px -1px rgba(0, 0, 0, 0.05);
 }
 
 .sharing-item .i {
@@ -473,14 +467,11 @@ header {
   transform: rotate(360deg);
 }
 
-
-
-/* Colores específicos por red social */
 .sharing-instagram  { --sharing-bg: #e05bcc; }
-.sharing-facebook  { --sharing-bg: #1778F2; }
-.sharing-twitter   { --sharing-bg: #55ACEE; }
-.sharing-pinterest { --sharing-bg: #F0002A; }
-.sharing-whatsapp  { --sharing-bg: #4FCE5D; }
+.sharing-facebook   { --sharing-bg: #1778F2; }
+.sharing-twitter    { --sharing-bg: #55ACEE; }
+.sharing-pinterest  { --sharing-bg: #F0002A; }
+.sharing-whatsapp   { --sharing-bg: #4FCE5D; }
 
 /* ======================== RESPONSIVE ======================== */
 @media (max-width: 900px) {
@@ -504,7 +495,7 @@ header {
   }
 }
 
-/* ======================== DEMO STYLING (OPCIONAL) ======================== */
+/* ======================== DEMO STYLING ======================== */
 body.demo-sharing {
   background-color: #e2e8f0;
   min-height: 100vh;
@@ -512,5 +503,3 @@ body.demo-sharing {
   justify-content: center;
   align-items: center;
 }
-
-
