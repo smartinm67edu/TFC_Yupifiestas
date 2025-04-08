@@ -244,8 +244,8 @@ header {
 
 
 
-/* ==== ESTRUCTURA GENERAL DE EVENTOS ==== */
-.eventos-section {
+/* ==== ESTRUCTURA GENERAL DE PACKS ==== */
+.packs-section {
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -254,7 +254,7 @@ header {
     margin: 0 auto;
 }
 
-.evento {
+.pack {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -263,12 +263,12 @@ header {
 }
 
 /* ==== VIDEO ==== */
-.evento-media {
+.pack-media {
     width: 100%;
     text-align: center;
 }
 
-.evento-video {
+.pack-video {
     width: 100%;
     max-width: 700px;
     height: auto;
@@ -277,34 +277,34 @@ header {
 }
 
 /* ==== TEXTO Y LISTA ==== */
-.evento-info {
+.pack-info {
     padding: 0 20px;
 }
 
-.evento-info h2 {
+.pack-info h2 {
     font-size: 2rem;
     margin-bottom: 10px;
     color: #8a2be2;
 }
 
-.evento-info p {
+.pack-info p {
     font-size: 1.1rem;
     margin-bottom: 15px;
 }
 
-.evento-info ul {
+.pack-info ul {
     list-style: none;
     padding-left: 0;
     margin-bottom: 20px;
 }
 
-.evento-info ul li {
+.pack-info ul li {
     margin-bottom: 10px;
     padding-left: 1em;
     position: relative;
 }
 
-.evento-info ul li::before {
+.pack-info ul li::before {
     content: "✔️";
     position: absolute;
     left: 0;
@@ -312,7 +312,7 @@ header {
 }
 
 /* ==== CARRUSEL PEQUEÑO ==== */
-.evento-carrusel h3 {
+.pack-carrusel h3 {
     margin-bottom: 10px;
     color: #555;
 }
@@ -386,13 +386,13 @@ header {
     cursor: pointer;
 }
 
-.evento.hidden {
+.pack.hidden {
     opacity: 0;
     transform: translateY(60px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.evento.visible {
+.pack.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -408,7 +408,7 @@ header {
     scroll-margin-top: 160px;
 }
 
-.eventos-section {
+.pack-section {
     width: 100%;
     min-height: 100vh;
     padding: 4rem 0;
@@ -426,33 +426,33 @@ header {
 
 
 @media (min-width: 768px) {
-    .evento {
+    .pack {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 30px;
     }
 
-    .evento-media,
-    .evento-info {
+    .pack-media,
+    .pack-info {
         flex: 1 1 50%;
     }
 
-    .evento-info {
+    .pack-info {
         padding: 0 40px;
         text-align: left;
         order: 1;
     }
 
-    .evento-media {
+    .pack-media {
         order: 2;
     }
 
-    .evento:nth-child(even) .evento-media {
+    .pack:nth-child(even) .pack-media {
         order: 1;
     }
 
-    .evento:nth-child(even) .evento-info {
+    .pack:nth-child(even) .pack-info {
         order: 2;
     }
 }
