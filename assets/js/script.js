@@ -57,14 +57,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
 
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+  // === ANIMACIÓN DE APARICIÓN DE LOS EVENTOS AL HACER SCROLL ===
+  const eventos = document.querySelectorAll('.evento');
+  const options = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
-  }
+  }, options);
+
+  eventos.forEach(evento => {
+    evento.classList.add('hidden');
+    observer.observe(evento);
+  });
+
+  // === EFECTO HOVER SUAVE EN VIDEOS ===
+  const videos = document.querySelectorAll('.evento-video');
+  videos.forEach(video => {
+    video.addEventListener('mouseenter', () => {
+      video.style.transform = 'scale(1.03)';
+      video.style.transition = 'transform 0.3s ease';
+    });
+
+    video.addEventListener('mouseleave', () => {
+      video.style.transform = 'scale(1)';
+    });
+  });
 });

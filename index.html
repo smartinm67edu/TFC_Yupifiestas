@@ -2,259 +2,261 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yupifiestas - Alquiler de Castillos Hinchables</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <script src="assets/js/blog.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yupifiestas - Alquiler de Castillos Hinchables</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script src="assets/js/script.js"></script>
 </head>
 
 <body>
-    <!-- ======================== ENCABEZADO ======================== -->
-    <header>
-        <div class="header-window">
-          <div class="container-header">
-            <div class="logo-title">
-              <img src="assets/img/logos/logoyupi.jpg" alt="Logo">
-              <h4>Yupifiestas</h4>
-              <label class="icon-menu" onclick="toggleMenu()">☰</label>
-            </div>
-          </div>
-          <nav class="nav">
-            <ul class="nav-links" id="nav-links">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="#">Castillos</a></li>
-              <li><a href="#packs">Packs</a></li>
-              <li><a href="assets/html/event.html">Eventos</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-              <li><a href="assets/html/blog.html">Blog</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-    <!-- ======================== PORTADA CON CARRUSEL ======================== -->
-    <div class="container-portada-carrusel">
-        <div class="carousel-wrapper">
-          <div class="carousel-track">
-            <div class="slide"><img src="/mnt/data/castillo_ejemplo.webp" alt=""></div>
-            <div class="slide" style="background-image: url('/mnt/data/castillo_ejemplo.webp');"></div>
-            <div class="slide" style="background-image: url('/mnt/data/castillo_ejemplo.webp');"></div>
-          </div>
-        </div>
-      
-        <div class="capa-gradient"></div>
-      
-        <div class="container-details">
-          <h1>Yupifiestas</h1>
-          <p>Alquiler de Castillos Hinchables para cualquier tipo de evento</p>
+  <!-- ======================== ENCABEZADO ======================== -->
+  <header>
+    <div class="header-window">
+      <div class="container-header">
+        <div class="logo-title">
+          <img src="assets/img/logos/logoyupi.jpg" alt="Logo">
+          <h4>Yupifiestas</h4>
+          <label class="icon-menu" id="menu-toggle">☰</label>
         </div>
       </div>
-      
-      
+      <nav class="nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Castillos</a></li>
+          <li><a href="#packs">Packs</a></li>
+          <li><a href="assets/html/event.html">Eventos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="assets/html/blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- ======================== CASTILLOS HINCHABLES ======================== -->
-    <section id="castillos" class="castillos-section">
-        <h2>Castillos Hinchables</h2>
-        <p class="castillos-descripcion">¡Descubre nuestros castillos hinchables más divertidos para todo tipo de
-            fiestas!</p>
-        <div class="castillos-grid">
-            <div class="castillo-card"><a href="/mnt/html/"><img src="mnt/data/castillo_ejemplo.webp"
-                        alt="Castillo 1"></a></div>
-            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 3"></div>
-            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 4"></div>
-            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 2"></div>
-            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 5"></div>
-            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 6"></div>
-            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 5"></div>
-            <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 6"></div>
-        </div>
-    </section>
-
-    <!-- ======================== PACKS ======================== -->
-    <div id="packs" class="packs">
-        <h2>Nuestros Packs</h2>
-        <div class="packs-container">
-
-            <!-- 🎉 Cumpleaños -->
-            <a href="assets/html/event_cumpleaños.html">
-                <div class="pack">
-                    <video autoplay muted loop playsinline class="pack-video">
-                        <source src="assets/img/castillos/cumpleaños.mp4" type="video/mp4">
-                    </video>
-                    <button>🎉 Cumpleaños</button>
-                </div>
-            </a>
-
-            <!-- 🎭 Despedidas -->
-            <a href="assets/html/event_despedidas.html">
-                <div class="pack">
-                    <video autoplay muted loop playsinline class="pack-video">
-                        <source src="assets/img/castillos/despedidas.mp4" type="video/mp4">
-                    </video>
-                    <button>🎭 Despedidas</button>
-                </div>
-            </a>
-
-            <!-- 🎪 Fiestas -->
-            <a href="assets/html/event_fiestas.html">
-                <div class="pack">
-                    <video autoplay muted loop playsinline class="pack-video">
-                        <source src="assets/img/castillos/fiestas.mp4" type="video/mp4">
-                    </video>
-                    <button>🎪 Fiestas</button>
-                </div>
-            </a>
-
-            <!-- 🍼 Gender Reveal -->
-            <a href="assets/html/event_gender_reveal.html">
-                <div class="pack">
-                    <video autoplay muted loop playsinline class="pack-video">
-                        <source src="assets/img/castillos/gender_reveal.mp4" type="video/mp4">
-                    </video>
-                    <button>🍼 Gender Reveal</button>
-                </div>
-            </a>
-
-            <!-- 🤠 Toro Mecánico -->
-            <a href="assets/html/event_toro_mecanico.html">
-                <div class="pack">
-                    <video autoplay muted loop playsinline class="pack-video">
-                        <source src="assets/img/castillos/toro_mecanico.mp4" type="video/mp4">
-                    </video>
-                    <button>🤠 Toro Mecánico</button>
-                </div>
-            </a>
-
-            <!-- 🏎️ Carreras Cars -->
-            <a href="assets/html/event_cars.html">
-                <div class="pack">
-                    <video autoplay muted loop playsinline class="pack-video">
-                        <source src="assets/img/castillos/cars1.mp4" type="video/mp4">
-                    </video>
-                    <button>🏎️ Carreras Cars</button>
-                </div>
-            </a>
-
-            <!-- 💦 Eventos Acuáticos -->
-            <a href="assets/html/event_agua.html">
-                <div class="pack">
-                    <video autoplay muted loop playsinline class="pack-video">
-                        <source src="assets/img/castillos/castillo_agua1.mp4" type="video/mp4">
-                    </video>
-                    <button>💦 Eventos Acuáticos</button>
-                </div>
-            </a>
-
-            <!-- 🏖️ Piscinas -->
-            <a href="assets/html/event_piscinas.html">
-                <div class="pack">
-                    <video autoplay muted loop playsinline class="pack-video">
-                        <source src="assets/img/castillos/castillo_agua2.mp4" type="video/mp4">
-                    </video>
-                    <button>🏖️ Piscinas y toboganes</button>
-                </div>
-            </a>
-
-        </div>
+  <!-- ======================== PORTADA CON CARRUSEL ======================== -->
+  <div class="container-portada-carrusel">
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <div class="slide"><img src="/mnt/data/castillo_ejemplo.webp" alt=""></div>
+        <div class="slide" style="background-image: url('/mnt/data/castillo_ejemplo.webp');"></div>
+        <div class="slide" style="background-image: url('/mnt/data/castillo_ejemplo.webp');"></div>
+      </div>
     </div>
 
+    <div class="capa-gradient"></div>
+
+    <div class="container-details">
+      <h1>Yupifiestas</h1>
+      <p>Alquiler de Castillos Hinchables para cualquier tipo de evento</p>
+    </div>
+  </div>
 
 
-   <!-- ======================== VIDEO PROMOCIONAL ======================== -->
-   <section class="promotionWrapper">
+
+  <!-- ======================== CASTILLOS HINCHABLES ======================== -->
+  <section id="castillos" class="castillos-section">
+    <h2>Castillos Hinchables</h2>
+    <p class="castillos-descripcion">¡Descubre nuestros castillos hinchables más divertidos para todo tipo de
+      fiestas!</p>
+    <div class="castillos-grid">
+      <div class="castillo-card"><a href="/mnt/html/"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 1"></a>
+      </div>
+      <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 3"></div>
+      <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 4"></div>
+      <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 2"></div>
+      <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 5"></div>
+      <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 6"></div>
+      <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 5"></div>
+      <div class="castillo-card"><img src="mnt/data/castillo_ejemplo.webp" alt="Castillo 6"></div>
+    </div>
+  </section>
+
+  <!-- ======================== PACKS ======================== -->
+  <div id="packs" class="packs">
+    <h2>Nuestros Packs</h2>
+    <div class="packs-container">
+
+      <!-- 🎉 Cumpleaños -->
+      <a href="assets/html/packs.html#pack-cumple">
+      <div class="pack">
+        <video autoplay muted loop playsinline class="pack-video">
+          <source src="assets/img/castillos/cumpleaños.mp4" type="video/mp4">
+        </video>
+        <button>Cumpleaños</button>
+      </div>
+      </a>
+
+      <!-- 🎭 Despedidas -->
+      <a href="assets/html/packs.html#pack-despedida">
+      <div class="pack">
+        <video autoplay muted loop playsinline class="pack-video">
+          <source src="assets/img/castillos/despedidas.mp4" type="video/mp4">
+        </video>
+        <button>Despedidas</button>
+      </div>
+      </a>
+
+      <!-- 🎪 Fiestas -->
+      <a href="assets/html/packs.html#pack-tematica">
+      <div class="pack">
+        <video autoplay muted loop playsinline class="pack-video">
+          <source src="assets/img/castillos/fiestas.mp4" type="video/mp4">
+        </video>
+        <button>Fiestas</button>
+      </div>
+      </a>
+
+      <!-- 🍼 Gender Reveal -->
+      <a href="assets/html/packs.html#pack-gender">
+      <div class="pack">
+        <video autoplay muted loop playsinline class="pack-video">
+          <source src="assets/img/castillos/gender_reveal.mp4" type="video/mp4">
+        </video>
+        <button>Gender Reveal</button>
+      </div>
+      </a>
+
+      <!-- 🤠 Toro Mecánico -->
+      <a href="assets/html/packs.html#pack-toro">
+      <div class="pack">
+        <video autoplay muted loop playsinline class="pack-video">
+          <source src="assets/img/castillos/toro_mecanico.mp4" type="video/mp4">
+        </video>
+        <button>Toro Mecánico</button>
+      </div>
+      </a>
+
+      <!-- 🏎️ Carreras Cars -->
+      <a href="assets/html/packs.html#pack-cars">
+      <div class="pack">
+        <video autoplay muted loop playsinline class="pack-video">
+          <source src="assets/img/castillos/cars1.mp4" type="video/mp4">
+        </video>
+        <button>Carreras Cars</button>
+      </div>
+      </a>
+
+      <!-- 💦 Eventos Acuáticos -->
+      <a href="assets/html/packs.html#pack-acuaticos">
+      <div class="pack">
+        <video autoplay muted loop playsinline class="pack-video">
+          <source src="assets/img/castillos/castillo_agua1.mp4" type="video/mp4">
+        </video>
+        <button>Eventos Acuáticos</button>
+      </div>
+      </a>
+
+      <!-- 🏖️ Piscinas -->
+      <a href="assets/html/packs.html#pack-espuma">
+        <div class="pack">
+          <video autoplay muted loop playsinline class="pack-video">
+            <source src="assets/img/castillos/castillo_agua2.mp4" type="video/mp4">
+          </video>
+          <button>Fiesta de la espuma</button>
+        </div>
+      </a>
+
+
+    </div>
+  </div>
+
+
+
+  <!-- ======================== VIDEO PROMOCIONAL ======================== -->
+  <section class="promotionWrapper">
     <video autoplay muted loop class="video-background">
-        <source src="assets/img/castillos/video_castillo1.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de videos.
+      <source src="assets/img/castillos/video_castillo1.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de videos.
     </video>
     <div class="capa-gradient"></div>
     <div class="container">
-        <div class="promotionInfo">
-            <h2>¿Necesitas más información?</h2>
-            <p>Consulta todos nuestros precios y ofertas exclusivas para eventos.</p>
-            <a href="#contacto" class="btn btn-primary">Reservanos</a>
-        </div>
+      <div class="promotionInfo">
+        <h2>¿Necesitas más información?</h2>
+        <p>Consulta todos nuestros precios y ofertas exclusivas para eventos.</p>
+        <a href="#contacto" class="btn btn-primary">Reservanos</a>
+      </div>
     </div>
-</section>
+  </section>
 
-    <footer id="contacto" class="footer">
-        <div class="footer-container">
-      
-          <!-- Información -->
-          <div class="footer-info">
-            <h3>🎉 Yupifiestas</h3>
-            <p>Alquiler de castillos hinchables para cualquier tipo de evento: cumpleaños, comuniones, despedidas y más.</p>
-            <p>📍 Ciudad, País</p>
-            <p>📧 <a href="mailto:info@yupifiestas.es">info@yupifiestas.es</a></p>
-            <p>📞 <a href="tel:+123456789">+12 345 6789</a></p>
-          </div>
-      
-          <!-- Menú -->
-          <div class="footer-links">
-            <h3>Reservas</h3>
-            <ul>
-              <li><a href="#packs">Ver Packs Disponibles</a></li>
-              <li><a href="#castillos">Catálogo de Castillos</a></li>
-              <li><a href="#promociones">Ofertas y Promociones</a></li>
-              <li><a href="#contacto">Atención al Cliente</a></li>
-            </ul>
-          </div>
-          
-          <!-- Redes sociales -->
-          <div class="footer-social">
-            <h3>Síguenos</h3>
-            <div class="sharing">
-              <!-- Facebook -->
-              <a href="#" class="sharing-item sharing-facebook" aria-label="Compartir en Facebook">
-                <svg class="i i-facebook" viewBox="0 0 24 24">
-                  <path d="M17 14h-3v8h-4v-8H7v-4h3V7a5 5 0 0 1 5-5h3v4h-3q-1 0-1 1v3h4Z"></path>
-                </svg>
-              </a>
-            
-              <!-- Twitter -->
-              <a href="#" class="sharing-item sharing-twitter" aria-label="Compartir en Twitter">
-                <svg class="i i-twitter" viewBox="0 0 24 24">
-                  <path d="m3 21 7.5-7.5m3-3L21 3M8 3H3l13 18h5Z"></path>
-                </svg>
-              </a>
-               
-              <!-- WhatsApp -->
-              <a href="#" class="sharing-item sharing-whatsapp" aria-label="Compartir en WhatsApp">
-                <svg class="i i-whatsapp" viewBox="0 0 24 24">
-                  <circle cx="9" cy="9" r="1"></circle>
-                  <circle cx="15" cy="15" r="1"></circle>
-                  <path d="M8 9a7 7 0 0 0 7 7m-9 5.2A11 11 0 1 0 2.8 18L2 22Z"></path>
-                </svg>
-              </a>
-    
-              <!-- Instagram -->
-              <a href="#" class="sharing-item sharing-instagram" aria-label="Compartir en Instagram">
-                <svg class="i i-instagram" viewBox="0 0 24 24">
-                  <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-2a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                </svg>
-              </a>
-          
-              <!-- Correo -->
-              <a href="#" class="sharing-item sharing-envelope" aria-label="Compartir por correo">
-                <svg class="i i-envelope" viewBox="0 0 24 24">
-                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 8-10 5L2 8"></path>
-                </svg>
-              </a>
-            </div>
-            
-          </div>
-      
+  <footer id="contacto" class="footer">
+    <div class="footer-container">
+
+      <!-- Información -->
+      <div class="footer-info">
+        <h3>🎉 Yupifiestas</h3>
+        <p>Alquiler de castillos hinchables para cualquier tipo de evento: cumpleaños, comuniones, despedidas y más.</p>
+        <p>📍 Ciudad, País</p>
+        <p>📧 <a href="mailto:info@yupifiestas.es">info@yupifiestas.es</a></p>
+        <p>📞 <a href="tel:+123456789">+12 345 6789</a></p>
+      </div>
+
+      <!-- Menú -->
+      <div class="footer-links">
+        <h3>Reservas</h3>
+        <ul>
+          <li><a href="#packs">Ver Packs Disponibles</a></li>
+          <li><a href="#castillos">Catálogo de Castillos</a></li>
+          <li><a href="#promociones">Ofertas y Promociones</a></li>
+          <li><a href="#contacto">Atención al Cliente</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="footer-social">
+        <h3>Síguenos</h3>
+        <div class="sharing">
+          <!-- Facebook -->
+          <a href="#" class="sharing-item sharing-facebook" aria-label="Compartir en Facebook">
+            <svg class="i i-facebook" viewBox="0 0 24 24">
+              <path d="M17 14h-3v8h-4v-8H7v-4h3V7a5 5 0 0 1 5-5h3v4h-3q-1 0-1 1v3h4Z"></path>
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a href="#" class="sharing-item sharing-twitter" aria-label="Compartir en Twitter">
+            <svg class="i i-twitter" viewBox="0 0 24 24">
+              <path d="m3 21 7.5-7.5m3-3L21 3M8 3H3l13 18h5Z"></path>
+            </svg>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="#" class="sharing-item sharing-whatsapp" aria-label="Compartir en WhatsApp">
+            <svg class="i i-whatsapp" viewBox="0 0 24 24">
+              <circle cx="9" cy="9" r="1"></circle>
+              <circle cx="15" cy="15" r="1"></circle>
+              <path d="M8 9a7 7 0 0 0 7 7m-9 5.2A11 11 0 1 0 2.8 18L2 22Z"></path>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="#" class="sharing-item sharing-instagram" aria-label="Compartir en Instagram">
+            <svg class="i i-instagram" viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-2a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+            </svg>
+          </a>
+
+          <!-- Correo -->
+          <a href="#" class="sharing-item sharing-envelope" aria-label="Compartir por correo">
+            <svg class="i i-envelope" viewBox="0 0 24 24">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 8-10 5L2 8"></path>
+            </svg>
+          </a>
         </div>
-      
-        <div class="waves"></div>
-      
-        <div class="footer-bottom">
-          &copy; 2025 <strong>Yupifiestas</strong> · Todos los derechos reservados
-        </div>
-      </footer>
-      
+
+      </div>
+
+    </div>
+
+    <div class="waves"></div>
+
+    <div class="footer-bottom">
+      &copy; 2025 <strong>Yupifiestas</strong> · Todos los derechos reservados
+    </div>
+  </footer>
+
 </body>
 
 </html>
