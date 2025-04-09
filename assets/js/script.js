@@ -74,10 +74,8 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, options);
 
 eventos.forEach(evento => {
-  evento.classList.add('hidden');
-  observer.observe(evento);
+  evento.classList.add('visible');
 });
-
 
   // === EFECTO HOVER SUAVE EN VIDEOS ===
   const videos = document.querySelectorAll('.evento-video');
