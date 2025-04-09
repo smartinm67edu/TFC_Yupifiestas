@@ -59,24 +59,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // === ANIMACIÓN DE APARICIÓN DE LOS EVENTOS AL HACER SCROLL ===
-  const eventos = document.querySelectorAll('.evento');
-  const options = {
-    threshold: 0.1
-  };
+const eventos = document.querySelectorAll('.evento');
+const options = {
+  threshold: 0.1
+};
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, options);
-
-  eventos.forEach(evento => {
-    evento.classList.add('hidden');
-    observer.observe(evento);
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
   });
+}, options);
+
+eventos.forEach(evento => {
+  evento.classList.add('hidden');
+  observer.observe(evento);
+});
+
 
   // === EFECTO HOVER SUAVE EN VIDEOS ===
   const videos = document.querySelectorAll('.evento-video');
