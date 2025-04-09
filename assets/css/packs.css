@@ -412,16 +412,14 @@ header {
     width: 100%;
     min-height: 100vh;
     padding: 4rem 0;
-    background: radial-gradient(
-      ellipse at center,
-      #ffffff 0%,
-      #f8f0fc 50%,
-      #ecd9f9 80%,
-      #e3c3f9 100%
-    );
+    background: radial-gradient(ellipse at center,
+            #ffffff 0%,
+            #f8f0fc 50%,
+            #ecd9f9 80%,
+            #e3c3f9 100%);
     overflow: hidden;
-  }
-  
+}
+
 
 
 
