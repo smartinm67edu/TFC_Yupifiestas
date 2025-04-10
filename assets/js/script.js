@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // === CARGAR HEADER Y FOOTER DINÁMICAMENTE ===
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      const headerContainer = document.getElementById('header');
+      if (headerContainer) {
+        headerContainer.innerHTML = data;
+      }
+    });
+
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      const footerContainer = document.getElementById('footer');
+      if (footerContainer) {
+        footerContainer.innerHTML = data;
+      }
+    });
+
   // === MENÚ DESPLEGABLE ===
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
@@ -59,23 +78,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // === ANIMACIÓN DE APARICIÓN DE LOS EVENTOS AL HACER SCROLL ===
-const eventos = document.querySelectorAll('.evento');
-const options = {
-  threshold: 0.1
-};
+  const eventos = document.querySelectorAll('.evento');
+  const options = {
+    threshold: 0.1
+  };
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  eventos.forEach(evento => {
+    evento.classList.add('visible');
   });
-}, options);
-
-eventos.forEach(evento => {
-  evento.classList.add('visible');
-});
 
   // === EFECTO HOVER SUAVE EN VIDEOS ===
   const videos = document.querySelectorAll('.evento-video');
