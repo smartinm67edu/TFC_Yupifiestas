@@ -4,7 +4,7 @@
   width: 100%;
   background: linear-gradient(45deg, #4a0080, #6a0dad, #8a2be2);
   color: white;
-  padding: 5rem 1.25rem 2rem;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 3vw, 1.25rem) clamp(1.5rem, 4vw, 2rem);
   text-align: center;
   overflow: hidden;
   font-family: 'Raleway', sans-serif;
@@ -16,188 +16,188 @@
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 3rem;
-  gap: 2rem;
+  padding-bottom: clamp(2rem, 5vw, 3rem);
+  gap: clamp(1.5rem, 3vw, 2rem);
 }
 
 .footer-info,
 .footer-social,
 .footer-links {
-  flex: 1 1 280px;
+  flex: 1 1 clamp(280px, 30vw, 320px);
   text-align: left;
-  font-size: 1rem;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(2px);
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-info:hover,
+.footer-social:hover,
+.footer-links:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .footer-info h3,
 .footer-social h3,
 .footer-links h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
   color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
-  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 204, 0, 0.3);
+  padding-bottom: clamp(0.5rem, 1vw, 0.75rem);
 }
 
-.footer-info p,
-.footer-links ul li,
-.footer-social a {
-  color: #eee;
-  line-height: 1.7;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links ul li {
-  margin: 0.5rem 0;
-}
-
-.footer-links ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-links ul li a:hover {
-  color: #ffcc00;
-}
-
-.footer-social .social-icon {
-  display: inline-block;
-  margin: 0.5rem;
-  font-size: 1.75rem;
-  color: #fff;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.footer-social .social-icon:hover {
-  color: #ffcc00;
-  transform: scale(1.2);
-}
-
-.waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Wave-pattern.svg');
-  background-size: 2500px 150px;
-  animation: moveWaves 6s infinite linear;
-}
-
-@keyframes moveWaves {
-  from {
-    background-position-x: 0;
-  }
-
-  to {
-    background-position-x: 2500px;
-  }
-}
-
-.footer-bottom {
-  font-size: 0.95rem;
-  opacity: 0.9;
-  padding-top: 2rem;
-  font-weight: 500;
-  color: #ddd;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* ======================== SHARING ======================== */
-.sharing {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--sharing-gap, 0.5rem);
-}
-
-.sharing-item {
-  transition: background 0.3s, color 0.3s;
-  color: var(--sharing-color, #fff);
-  background-color: var(--sharing-bg, #000);
-  padding: var(--sharing-padding, 0.875rem);
-  border-radius: var(--sharing-radius, 0.5rem);
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1), 0 2px 5px -1px rgba(0, 0, 0, 0.05);
-}
-
-.sharing-item .i {
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-  transition: transform 0.3s;
-  stroke-width: 2;
-  width: var(--sharing-size, 1.4rem);
-  height: var(--sharing-size, 1.4rem);
-  display: block;
-}
-
-.sharing-item:hover {
-  background-color: #fff;
-  --sharing-color: var(--sharing-bg, #000);
-}
-
-.sharing-item:hover .i {
-  transform: rotate(360deg);
-}
-
-.sharing-instagram {
-  --sharing-bg: #e05bcc;
-}
-
-.sharing-facebook {
-  --sharing-bg: #1778F2;
-}
-
-.sharing-twitter {
-  --sharing-bg: #55ACEE;
-}
-
-.sharing-pinterest {
-  --sharing-bg: #F0002A;
-}
-
-.sharing-whatsapp {
-  --sharing-bg: #4FCE5D;
-}
-
-/* ======================== RESPONSIVE ======================== */
-@media (max-width: 900px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-info,
-  .footer-social,
-  .footer-links {
-    text-align: center;
-  }
-
-  .footer-social .social-icon {
-    font-size: 1.5rem;
-  }
-
-  .social-buttons {
-    justify-content: center;
-  }
-}
-
-/* ======================== DEMO STYLING ======================== */
-body.demo-sharing {
-  background-color: #e2e8f0;
-  min-height: 100vh;
+/* ======================== BOTONES SOCIALES MEJORADOS ======================== */
+.social-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 1.5rem 0;
 }
+
+.social-btn {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  transform: rotate(45deg);
+  left: -110%;
+  top: -10%;
+  transition: all 0.5s ease;
+}
+
+.social-btn:hover::before {
+  left: 110%;
+}
+
+.social-btn .icon {
+  position: relative;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-btn .icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.social-btn:hover .icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.social-btn .pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 14px;
+  opacity: 0;
+  transform: scale(0.8);
+  z-index: 1;
+}
+
+.social-btn .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 13px;
+  background: white;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+  white-space: nowrap;
+  font-weight: 600;
+  transform: translateY(10px);
+}
+
+.social-btn:hover .tooltip {
+  opacity: 1;
+  top: -42px;
+  transform: translateY(0);
+}
+
+.social-btn:hover .pulse {
+  animation: pulse-animation 1.5s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Colores específicos con gradientes mejorados */
+.social-btn.instagram { 
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+}
+.social-btn.email { 
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+.social-btn.facebook { 
+  background: linear-gradient(135deg, #1877f2 0%, #0a58ca 100%); 
+}
+.social-btn.twitter { 
+  background: linear-gradient(135deg, #1da1f2 0%, #0d8ecf 100%); 
+}
+.social-btn.whatsapp { 
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); 
+}
+
+/* Animación de flotación suave */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.social-btn {
+  animation: float 5s ease-in-out infinite;
+}
+
+.social-btn:nth-child(2) { animation-delay: 0.2s; }
+.social-btn:nth-child(3) { animation-delay: 0.4s; }
+.social-btn:nth-child(4) { animation-delay: 0.6s; }
+.social-btn:nth-child(5) { animation-delay: 0.8s; }
+
+/* Resto de estilos del footer... */

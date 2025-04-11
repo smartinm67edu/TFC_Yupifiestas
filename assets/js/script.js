@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const footerContainer = document.getElementById('footer');
       if (footerContainer) {
         footerContainer.innerHTML = data;
+        
+        // Inicializar botones sociales después de cargar el footer
+        initSocialButtons();
       }
     });
 
@@ -108,4 +111,71 @@ document.addEventListener('DOMContentLoaded', () => {
       video.style.transform = 'scale(1)';
     });
   });
+
+  // === FUNCIÓN PARA INICIALIZAR BOTONES SOCIALES ===
+  function initSocialButtons() {
+    // Añadir estilo para la animación de onda
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes wave {
+        to {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Configurar eventos para los botones sociales
+    document.querySelectorAll('.social-btn').forEach(button => {
+      // Efecto de onda al hacer clic
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Crear efecto de onda
+        const wave = document.createElement('span');
+        wave.className = 'wave';
+        wave.style.position = 'absolute';
+        wave.style.borderRadius = '50%';
+        wave.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+        wave.style.pointerEvents = 'none';
+        wave.style.transform = 'scale(0)';
+        wave.style.animation = 'wave 0.6s linear';
+        
+        this.appendChild(wave);
+        
+        // Tamaño inicial del efecto de onda
+        const size = Math.max(this.offsetWidth, this.offsetHeight);
+        wave.style.width = size + 'px';
+        wave.style.height = size + 'px';
+        
+        // Posición del efecto de onda
+        wave.style.left = (e.offsetX - size/2) + 'px';
+        wave.style.top = (e.offsetY - size/2) + 'px';
+        
+        // Eliminar el elemento después de la animación
+        setTimeout(() => wave.remove(), 600);
+        
+        // Abrir enlace después de un breve retraso (simulación)
+        setTimeout(() => {
+          const url = this.getAttribute('href');
+          if(url && url !== '#') {
+            window.open(url, '_blank');
+          }
+        }, 300);
+      });
+      
+      // Efecto de sonido al interactuar (opcional)
+      button.addEventListener('mouseenter', () => {
+        const sound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3');
+        sound.volume = 0.2;
+        sound.play().catch(e => console.log('No se pudo reproducir sonido'));
+      });
+    });
+  }
+  
+  // Inicializar botones sociales si ya existen en el DOM
+  if (document.querySelector('.social-btn')) {
+    initSocialButtons();
+  }
 });
