@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Carrusel
+  fetch("assets/html/header.html")
+  .then(res => res.text())
+  .then(data => {
+    const header = document.getElementById("header");
+    if (header) header.innerHTML = data;
+  });
+
+fetch("assets/html/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    const footer = document.getElementById("footer");
+    if (footer) footer.innerHTML = data;
+  });
+
+  // === CARRUSEL ===
   const track = document.querySelector('.carousel-track');
   const nextBtn = document.querySelector('.carousel-btn.next');
   const prevBtn = document.querySelector('.carousel-btn.prev');
@@ -21,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Lightbox
+  // === LIGHTBOX ===
   const zoomables = document.querySelectorAll('.zoomable');
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.querySelector('.lightbox-img');
@@ -48,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Animación de aparición de eventos
+  // === ANIMACIÓN DE APARICIÓN ===
   const eventos = document.querySelectorAll('.evento');
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -61,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   eventos.forEach(evento => observer.observe(evento));
 
-  // Hover suave en videos
+  // === HOVER SUAVE EN VIDEOS ===
   const videos = document.querySelectorAll('.evento-video');
   videos.forEach(video => {
     video.addEventListener('mouseenter', () => {
