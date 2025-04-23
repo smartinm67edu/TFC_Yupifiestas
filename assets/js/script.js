@@ -1,17 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch("assets/html/header.html")
-  .then(res => res.text())
-  .then(data => {
-    const header = document.getElementById("header");
-    if (header) header.innerHTML = data;
-  });
+  // Detectar si estamos en la raíz o en assets/html/
+  const basePath = location.pathname.includes("/assets/html/") ? "../" : "assets/";
 
-fetch("assets/html/footer.html")
-  .then(res => res.text())
-  .then(data => {
-    const footer = document.getElementById("footer");
-    if (footer) footer.innerHTML = data;
-  });
+  fetch(`${basePath}html/header.html`)
+    .then(res => res.text())
+    .then(data => {
+      const header = document.getElementById("header");
+      if (header) header.innerHTML = data;
+    });
+
+  fetch(`${basePath}html/footer.html`)
+    .then(res => res.text())
+    .then(data => {
+      const footer = document.getElementById("footer");
+      if (footer) footer.innerHTML = data;
+    });
+
+
+  // === MENÚ DESPLEGABLE ===
+  function initMenuToggle() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+  }
 
   // === CARRUSEL ===
   const track = document.querySelector('.carousel-track');
