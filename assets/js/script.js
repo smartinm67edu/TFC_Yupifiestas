@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Detectar si estamos en la raíz o en assets/html/
   const basePath = location.pathname.includes("/assets/html/") ? "../" : "assets/";
 
+  // === CARGA HEADER ===
   fetch(`${basePath}html/header.html`)
     .then(res => res.text())
     .then(data => {
       const header = document.getElementById("header");
-      if (header) header.innerHTML = data;
+      if (header) {
+        header.innerHTML = data;
+        initMenuToggle();
+        initScrollToFooter();
+      }
     });
 
+  // === CARGA FOOTER ===
   fetch(`${basePath}html/footer.html`)
     .then(res => res.text())
     .then(data => {
@@ -16,15 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
       if (footer) footer.innerHTML = data;
     });
 
-
   // === MENÚ DESPLEGABLE ===
   function initMenuToggle() {
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
-
     if (menuToggle && navLinks) {
       menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+      });
+    }
+  }
+
+  // === ENLACE "CONTACTO" ===
+  function initScrollToFooter() {
+    const contactoLink = document.querySelector('a[href="#contacto"]');
+    if (contactoLink) {
+      contactoLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const footer = document.getElementById('contacto');
+        if (footer) {
+          footer.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.location.href = '/index.html#contacto';
+        }
       });
     }
   }
